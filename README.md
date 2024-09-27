@@ -6,7 +6,7 @@ permalink: /
 
 > 多年积累的学习经验、详实的学习记录以及在项目实践中遇到的问题与解决方案
 >
-> 作者：[前端大波](https://zhaoxiaozhao1.github.io)
+> 作者：[前端大波](https://zhaoxiaozhao1.github.io/%E4%BD%9C%E8%80%85/#%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D)
 >
 > 本站地址：[https://zhaoxiaozhao1.github.io](https://zhaoxiaozhao1.github.io)
 

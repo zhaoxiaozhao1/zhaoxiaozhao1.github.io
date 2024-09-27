@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基于vuePress搭建个人博客详细教程 | 大波的Web开发之路</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?a2e84efce2f2a4f49c8f2cd90896c996";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    <meta name="description" content="多年积累的学习经验、详实的学习记录以及在项目实践中遇到的问题与解决方案">
+    <meta property="article:modified_time" content="2024-09-27T05:36:15.000Z">
+    <meta property="og:site_name" content="大波的Web开发之路">
+    <meta property="og:title" content="基于vuePress搭建个人博客详细教程">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zhaoxiaozhao1.github.io/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+    <meta name="twitter:title" content="基于vuePress搭建个人博客详细教程">
+    <meta name="twitter:url" content="https://zhaoxiaozhao1.github.io/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="程序员, web前端, 计算机">
+    <meta property="article:tag" content="程序员">
+    <meta name="keywords" content="前端大波, web前端, web前端百科, Vue, 前端干货分享, 前端, 开发, 编程分享, 项目, IT, 求职, 面经">
+    
+    <link rel="preload" href="/assets/css/0.styles.449b8bf1.css" as="style"><link rel="preload" href="/assets/js/app.dd0fcc94.js" as="script"><link rel="preload" href="/assets/js/2.8ce7e6c8.js" as="script"><link rel="preload" href="/assets/js/36.eae10e3f.js" as="script"><link rel="prefetch" href="/assets/js/1.91bae37a.js"><link rel="prefetch" href="/assets/js/10.60ec7dc7.js"><link rel="prefetch" href="/assets/js/11.df4bca4a.js"><link rel="prefetch" href="/assets/js/12.d177ebae.js"><link rel="prefetch" href="/assets/js/13.71cd2bae.js"><link rel="prefetch" href="/assets/js/14.f93d4c8d.js"><link rel="prefetch" href="/assets/js/15.55fbbbce.js"><link rel="prefetch" href="/assets/js/16.d5c5c4c2.js"><link rel="prefetch" href="/assets/js/17.caa88a3f.js"><link rel="prefetch" href="/assets/js/18.9bb0c36b.js"><link rel="prefetch" href="/assets/js/19.64920e04.js"><link rel="prefetch" href="/assets/js/20.e934be12.js"><link rel="prefetch" href="/assets/js/21.822e6bbe.js"><link rel="prefetch" href="/assets/js/22.2c9885f7.js"><link rel="prefetch" href="/assets/js/23.e352bb29.js"><link rel="prefetch" href="/assets/js/24.da1f2f77.js"><link rel="prefetch" href="/assets/js/25.ea87ab8d.js"><link rel="prefetch" href="/assets/js/26.65c82108.js"><link rel="prefetch" href="/assets/js/27.7aa28bad.js"><link rel="prefetch" href="/assets/js/28.c4900893.js"><link rel="prefetch" href="/assets/js/29.769a9d9f.js"><link rel="prefetch" href="/assets/js/3.0963f883.js"><link rel="prefetch" href="/assets/js/30.aaf2048d.js"><link rel="prefetch" href="/assets/js/31.9a04e1b5.js"><link rel="prefetch" href="/assets/js/32.ce1e6b59.js"><link rel="prefetch" href="/assets/js/33.84dd0c16.js"><link rel="prefetch" href="/assets/js/34.26ec8ac4.js"><link rel="prefetch" href="/assets/js/35.0301be9a.js"><link rel="prefetch" href="/assets/js/37.01ae41ad.js"><link rel="prefetch" href="/assets/js/38.88a2e624.js"><link rel="prefetch" href="/assets/js/4.d158963c.js"><link rel="prefetch" href="/assets/js/5.fb2c0813.js"><link rel="prefetch" href="/assets/js/6.4e9b79df.js"><link rel="prefetch" href="/assets/js/7.d6be8fa8.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.84d95967.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.449b8bf1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="大波的Web开发之路" class="logo"> <span class="site-name can-hide">大波的Web开发之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/干货分享/" class="nav-link">
+  干货分享
+</a></div><div class="nav-item"><a href="/知识碎片/" class="nav-link">
+  知识碎片
+</a></div> <a href="https://github.com/zhaoxiaozhao1/zhaoxiaozhao1.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/干货分享/" class="nav-link">
+  干货分享
+</a></div><div class="nav-item"><a href="/知识碎片/" class="nav-link">
+  知识碎片
+</a></div> <a href="https://github.com/zhaoxiaozhao1/zhaoxiaozhao1.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/" class="sidebar-link">免费学习路线</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>知识碎片</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/%E9%9D%A2%E8%AF%95%E9%A2%981/" class="sidebar-link">面试题（一）</a></li><li><a href="/%E9%9D%A2%E8%AF%95%E9%A2%982/" class="sidebar-link">面试题（二）</a></li><li><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" aria-current="page" class="active sidebar-link">基于vuePress搭建个人博客详细教程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#前言" class="sidebar-link">前言：</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#背景" class="sidebar-link">背景：</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#正题" class="sidebar-link">正题：</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="content"><div style="width:100%"><div class="theme-default-content custom-content content__default"><h1 id="基于vuepress搭建个人博客详细教程"><a href="#基于vuepress搭建个人博客详细教程" class="header-anchor">#</a> 基于vuePress搭建个人博客详细教程</h1> <p>如果图片加载不出来，可以点击这里查看<a href="https://blog.csdn.net/weixin_41201231/article/details/142588770" target="_blank" rel="noopener noreferrer">基于vuePress搭建个人博客详细教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言：</h2> <div class="language- extra-class"><pre><code>    如果你想搭建个人博客却毫无想法，那么告诉你来对地方啦。在这个卷出花样的大环境中（说出卷出花样让我想起了达美乐的各种卷边😍😍😍每周二、三七折哟，所谓接二连三，达美乐打钱。抱歉扯远了哈😁）如果你还没有一个个人的技术博客那可是会大大减分的哦。今天大波就手把手带你搭建一个漂亮的个人博客。
+</code></pre></div><h2 id="背景"><a href="#背景" class="header-anchor">#</a> 背景：</h2> <div class="language- extra-class"><pre><code>    这几天表弟找我要我帮他弄一个个人博客，于是乎帮他找了一套模板，顺便改版了一下自己的个人博客[前端大波](https://zhaoxiaozhao1.github.io/)，目前正在持续上传文档，欢迎大家来探讨学习。
+</code></pre></div><h2 id="正题"><a href="#正题" class="header-anchor">#</a> 正题：</h2> <h3 id="前期准备"><a href="#前期准备" class="header-anchor">#</a> 前期准备</h3> <div class="language- extra-class"><pre><code>	开发工具：Vscode、WebStorm等等，开心就好。
+	开发环境：git、node、npm；注意：node和npm的版本好尽量和下图大差不差
+	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8dc56f8794484214862005a58525527b.png)
+	拥有自己的github账户，没有的话请前往[github官网](https://github.com/)自行注册。
+</code></pre></div><h3 id="正式开始"><a href="#正式开始" class="header-anchor">#</a> 正式开始</h3> <div class="language- extra-class"><pre><code>	这里已经为大家筛选出了一套很优秀的项目模版，大家完全不用操心前期的项目搭建，只需要全身心的投入到文章创作中即可
+</code></pre></div><h4 id="clone项目模版-下载zip包"><a href="#clone项目模版-下载zip包" class="header-anchor">#</a> clone项目模版（下载zip包）</h4> <div class="language- extra-class"><pre><code>	大家可以打开这个[开源地址](https://github.com/liyupi/codefather/tree/template)。这款模版是大佬鱼皮总结开发，一直有在维护大家放心使用。
+	操作步骤如下：
+</code></pre></div><ul><li><p>页面打开后，点击Download ZIP，下载模版。
+<img alt="在这里插入图片描述" data-src="https://i-blog.csdnimg.cn/direct/bb94b166ce0f48dc85cbe1e6325edd34.png" loading="lazy" class="lazy"></p></li> <li><p>解压codefather-template压缩包，这里使用vscode工具打开解压后的codefather-template项目。</p></li> <li><p>使用vscode终端进入到项目根目录，确认node版本号后，执行npm i 下载依赖。
+<img alt="在这里插入图片描述" width="500" data-src="https://i-blog.csdnimg.cn/direct/ba88934ffa484bc88120280a1ef99b7a.png" loading="lazy" class="lazy"></p></li> <li><p>接着打开package.json，找到scripts，就能看到运行命令<strong>docs:dev</strong>和打包命令<strong>docs:build</strong> <img alt="在这里插入图片描述" width="500" data-src="https://i-blog.csdnimg.cn/direct/2fefed2ab96944f5aefb24efa53877b6.png" loading="lazy" class="lazy"></p></li> <li><p>终端中执行 <strong>npm run docs:dev</strong> , 稍后我们可以看到命令行中出现如下内容
+<img alt="在这里插入图片描述" data-src="https://i-blog.csdnimg.cn/direct/1a454dfb82974bacaf340c09fbc00e33.png" loading="lazy" class="lazy"></p></li> <li><p>按住cmd点击终端中的地址，便可在浏览器中打开博客首页啦。如果你已经达到这一步，此刻恭喜你已经成功了80%。</p></li></ul> <h4 id="项目目录分析"><a href="#项目目录分析" class="header-anchor">#</a> 项目目录分析</h4> <p>如果你了解vuepress的话，那应该清楚<strong>README.md</strong>或者<strong>index.md</strong>在更目录下是相当于入口文件的存在，默认会打开此文件作为网站首页，但是<strong>两者不要同时存在于根目录</strong>哦。
+<img alt="在这里插入图片描述" width="200" data-src="https://i-blog.csdnimg.cn/direct/0ddf9fedb0be4076a7ce67a98f3b1bf1.png#pic_center" loading="lazy" class="lazy"></p> <ul><li><p>根目录下有<strong>学习路线</strong>、<strong>.vuepress</strong>、<strong>作者.md</strong>、<strong>README.md</strong>以及一些配置文件。其中在根目录中的md文件，我们可以直接通过<strong>http://localhost:8080/作者</strong>访问，以及README.md是默认路径你会发现我们打开**http://localhost:8080/**的时候就是readme.md的内容。所以，一些公共的文章我们可以直接放到根目录中，作为一级目录，便于访问。</p></li> <li><p><strong>学习路线</strong>文件夹其实就是我们的文章归类，我们还可以创建一些其他的类型文件夹，比如散文、学习碎片、常见问题等等，把对应的文章放入即可。</p></li> <li><p><strong>.vuepress</strong>文件夹
+1、<strong>public</strong>文件夹内存放的是我们的项目中用到的图片、icon等
+2、<strong>sidebars</strong>文件夹存放的是刚才提到的<strong>学习路线</strong>这种归类文件夹的配置文件，每当我们新创建一个类型文件夹比如<strong>常见问题</strong>就需要在sidebars中对应创建一个example.ts,文件内容如下图：
+<img alt="在这里插入图片描述" height="400" data-src="https://i-blog.csdnimg.cn/direct/d81d6b73ca9c4fe6997542a07d8656be.png" loading="lazy" class="lazy"></p> <p>⚠️注意：第一：需要我们创建一个<strong>入口文件README.md</strong>用来做页面显示如图
+<img alt="在这里插入图片描述" width="600" data-src="https://i-blog.csdnimg.cn/direct/aed3426aba8b4330b2ac4cbc2808af20.png" loading="lazy" class="lazy">
+⚠️第二：我们创建的<strong>常见问题.md</strong>中文章开头一定要使用**#大标题作为首行**，因为在编译的过程中，脚本会获取md文件中的title内容。
+3、<strong>theme</strong>文件夹中存放的是博客主题以及一些页面组建，比如：导航栏、底部、侧边栏、右侧固定栏目等等。styles中方的是样式。
+4、<strong>etraSideBar.ts</strong>存放的是固定在右侧边栏的配置文件，如图：<img alt="在这里插入图片描述" data-src="https://i-blog.csdnimg.cn/direct/f432b0cfe4ad47cebcf5ac8e638a0152.png" loading="lazy" class="lazy"></p> <p>5、<strong>footer.ts</strong>是底部版权信息配置文件。
+6、<strong>navbar.ts</strong>是导航配置文件，如图<img alt="在这里插入图片描述" data-src="https://i-blog.csdnimg.cn/direct/5c2d6a726898473f93b9a7066b6e4e18.png" loading="lazy" class="lazy">
+7、<strong>sidebar.ts</strong>是侧边栏配置文件，上边我们在根目录创建的类型文件<strong>常见问题</strong>就需要在这里配置如图：
+<img alt="在这里插入图片描述" width="500" data-src="https://i-blog.csdnimg.cn/direct/9d3c4c8e107249b9ab9c6112aa4265b4.png" loading="lazy" class="lazy">
+接着我们需要在根目录的README.md文件中添加如下内容，我们就可以再网站首页看到新增的内容块儿了
+<img alt="在这里插入图片描述" width="500" data-src="https://i-blog.csdnimg.cn/direct/2101728d1e6d40849ce29ae00ca83a67.png" loading="lazy" class="lazy">
+这样我们得常见问题就出来啦。
+<img alt="在这里插入图片描述" data-src="https://i-blog.csdnimg.cn/direct/7574295d7d0f47e0ad6c359abd0f6d03.png" loading="lazy" class="lazy">
+点击常见问题会跳转到这里
+<img alt="在这里插入图片描述" data-src="https://i-blog.csdnimg.cn/direct/1c8a0cea47144e8bb3a44ed8f2e65318.png" loading="lazy" class="lazy"></p></li></ul> <p>这样我们得本地建设就ok啦，大家学废了吗？接着就是大家可以在上边无限创作了</p> <p><strong>下一期教大家如何把本地项目放到github静态站点上。</strong></p></div> <footer class="page-edit" style="margin:0;"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">9/27/2024, 1:36:15 PM</span></div></footer> <!----></div> <div class="toc-container-sidebar"><div class="pos-box"><div class="icon-arrow"></div> <div class="scroll-box" style="max-height:86vh"><div style="font-weight:bold;">基于vuePress搭建个人博客详细教程</div> <hr> <div class="toc-box"><ul class="toc-sidebar-links"><li><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#前言" class="toc-sidebar-link">前言：</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#背景" class="toc-sidebar-link">背景：</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#正题" class="toc-sidebar-link">正题：</a><ul class="toc-sidebar-sub-headers"><li class="toc-sidebar-sub-header"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#前期准备" class="toc-sidebar-link">前期准备</a></li><li class="toc-sidebar-sub-header"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#正式开始" class="toc-sidebar-link">正式开始</a></li><li class="toc-sidebar-sub-header toc-sidebar-depth-4"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#clone项目模版-下载zip包" class="toc-sidebar-link">clone项目模版（下载zip包）</a></li><li class="toc-sidebar-sub-header toc-sidebar-depth-4"><a href="/%E5%9F%BA%E4%BA%8Evuepress%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#项目目录分析" class="toc-sidebar-link">项目目录分析</a></li></ul></li></ul></div></div></div></div></div>  <main class="footer"><div class="item-wrap"></div> <div class="copy-right"><span class="name"> web导航   |     </span> <span>
+          
+        </span></div></main></main> <aside class="page-sidebar"> <div class="page-side-toolbar"></div>  </aside></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.dd0fcc94.js" defer></script><script src="/assets/js/2.8ce7e6c8.js" defer></script><script src="/assets/js/36.eae10e3f.js" defer></script>
+  </body>
+</html>

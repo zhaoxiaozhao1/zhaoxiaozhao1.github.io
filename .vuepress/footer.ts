@@ -8,10 +8,10 @@ export default {
       // icon: "/icon/user.svg",
       // href: "https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah",
     },
-    // {
-    //   label: "鱼鸢网络",
-    //   href: "https://yuyuanweb.com/",
-    // },
+    {
+      label: "CSDN",
+      href: "https://blog.csdn.net/weixin_41201231?type=blog",
+    },
     // {
     //   label: "老鱼简历",
     //   href: "https://www.laoyujianli.com/",
